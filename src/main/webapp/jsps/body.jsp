@@ -25,6 +25,9 @@
     	<c:choose>
 			<c:when test="${empty sessionScope.session_user }">
 			<h1>Please Sign In</h1>
+			</c:when>
+		<c:otherwise>
+		    <h1>Inventory</h1>
 			<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create Inventory</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read Inventory</a> |&nbsp;
 			<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update Inventory</a> |&nbsp;	 
@@ -53,9 +56,6 @@
 			<a href="<c:url value='/jsps/entity5/charity_read.jsp'/>" target="_parent">Read Create Charity </a> |&nbsp;
 			<a href="<c:url value='/jsps/entity5/charity_update.jsp'/>" target="_parent">Update Create Charity </a> |&nbsp;	 
 			<a href="<c:url value='/jsps/entity5/charity_delete.jsp'/>" target="_parent">Delete Create Charity </a>
-			</c:when>
-		<c:otherwise>
-		    <h1>Inventory</h1>
 
 		</c:otherwise>
 	</c:choose>
