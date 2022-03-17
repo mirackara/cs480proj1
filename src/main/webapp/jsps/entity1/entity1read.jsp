@@ -37,12 +37,12 @@
 		iframe {
 			width: 100%;
 			height: 100%;
-		}
+		} 
 	</style>
   </head>
   
   <body>
-<table class="table" align="center">
+<table class="table" align="center"> 
 	<tr style="background: #68d415; height: 120px; ">
 		<td colspan="2" align="center">
 			<h1 style="text-align: center; font-size:50px;">READ INVENTORY</h1>

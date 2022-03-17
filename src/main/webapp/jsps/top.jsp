@@ -20,7 +20,7 @@
 	body {
 		background: #68d415; 
 	}
-	a {
+	a { 
 		text-transform:none;
 		text-decoration:none;
 	} 
