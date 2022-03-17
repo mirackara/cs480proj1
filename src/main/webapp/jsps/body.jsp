@@ -31,10 +31,10 @@
 			<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete Inventory</a>	
 			</br>
 		    <h1>Store</h1>
-			<a href="<c:url value='/jsps/entity2/restaurantcreate.jsp'/>" target="_parent">Create Store </a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity2/restaurantread.jsp'/>" target="_parent">Read Store</a> |&nbsp;
-			<a href="<c:url value='/jsps/entity2/restaurantupdate.jsp'/>" target="_parent">Update Store</a> |&nbsp;	 
-			<a href="<c:url value='/jsps/entity2/restaurantdelete.jsp'/>" target="_parent">Delete Store</a>	
+			<a href="<c:url value='/jsps/entity2/storecreate.jsp'/>" target="_parent">Create Store </a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity2/storeread.jsp'/>" target="_parent">Read Store</a> |&nbsp;
+			<a href="<c:url value='/jsps/entity2/storeupdate.jsp'/>" target="_parent">Update Store</a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity2/storedelete.jsp'/>" target="_parent">Delete Store</a>	
 			</br>
 		    <h1>Donation Items</h1>
 			<a href="<c:url value='/jsps/entity3/donationcreate.jsp'/>" target="_parent">Create Donation Items </a> |&nbsp; 
