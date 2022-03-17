@@ -13,13 +13,34 @@ Mirac Kara (mkara3@uic.edu)
 
 ## Screenshots:
 
-## CRUD for Inventory
 
+## CRUD for Inventory
+![image](https://user-images.githubusercontent.com/55501260/158738928-01af0ace-e821-4ffd-b6ad-88971a5cfe94.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158738952-5b4e2ba2-2432-4592-97b8-d7049f32ebe1.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158738979-7a2633b1-f43c-4db2-8e95-778743cfccfc.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739009-ebe5f9fa-bc5b-4a07-abda-3c011406cf23.png)
 
 ## CRUD for Store
+![image](https://user-images.githubusercontent.com/55501260/158739029-e3c8157c-39f8-475b-9155-d69d62a6775c.png)
 
+![image](https://user-images.githubusercontent.com/55501260/158739080-ea76d95b-120e-4a4e-87f7-79e91d1386ba.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739095-483176a2-2d38-45cc-bb2a-80c17409b821.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739117-2de3474b-3f62-416f-b045-364b5a6c33d9.png)
 
 ## CRUD for Donation Items
+![image](https://user-images.githubusercontent.com/55501260/158739133-38149661-a1b8-4f1c-9fd8-23c202e0fe0c.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739153-62450899-ecf8-46b8-9056-bcf4cecfea5d.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739166-888fe28c-7ac3-412c-8026-5f93ea529ae5.png)
+
+![image](https://user-images.githubusercontent.com/55501260/158739172-5e1d4870-b691-4055-850e-51ecd718669f.png)
+
 
 
 ## CRUD for Location
