@@ -41,7 +41,7 @@
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
-			<a href="<c:url value='/jsps/item.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/main.jsp'/>" target="body">Return</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 		</c:otherwise>
 	</c:choose>
