@@ -40,7 +40,7 @@
 	</style>
   </head>
   
-  <body>
+  <body> 
 <table class="table" align="center">
 	<tr style="background: #68d415; height: 120px; ">
 		<td colspan="2" align="center">
