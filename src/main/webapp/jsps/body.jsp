@@ -22,7 +22,43 @@
   </head>
   
   <body>
-    <h1>HAVE A NICE WEEKEND</h1>
+    	<c:choose>
+			<c:when test="${empty sessionScope.session_user }">
+			<h1>Please Sign In</h1>
+			</c:when>
+		<c:otherwise>
+		    <h1>Inventory</h1>
+			<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create Inventory</a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read Inventory</a> |&nbsp;
+			<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update Inventory</a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete Inventory</a>	
+			</br>
+		    <h1>Store</h1>
+			<a href="<c:url value='/jsps/entity2/restaurantcreate.jsp'/>" target="_parent">Create Store </a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity2/restaurantread.jsp'/>" target="_parent">Read Store</a> |&nbsp;
+			<a href="<c:url value='/jsps/entity2/restaurantupdate.jsp'/>" target="_parent">Update Store</a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity2/restaurantdelete.jsp'/>" target="_parent">Delete Store</a>	
+			</br>
+		    <h1>Donation Items</h1>
+			<a href="<c:url value='/jsps/entity3/donationcreate.jsp'/>" target="_parent">Create Donation Items </a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity3/donationread.jsp'/>" target="_parent">Read Donation Items</a> |&nbsp;
+			<a href="<c:url value='/jsps/entity3/donationupdate.jsp'/>" target="_parent">Update Donation Items</a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity3/donationdelete.jsp'/>" target="_parent">Delete Donation Items</a>	
+			</br>
+		    <h1>Location</h1>
+			<a href="<c:url value='/jsps/entity4/locationcreate.jsp'/>" target="_parent">Create Location </a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity4/locationread.jsp'/>" target="_parent">Read Location</a> |&nbsp;
+			<a href="<c:url value='/jsps/entity4/locationupdate.jsp'/>" target="_parent">Update Location</a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity4/locationdelete.jsp'/>" target="_parent">Delete Location</a>	
+			</br>
+		    <h1>Charity</h1>
+			<a href="<c:url value='/jsps/entity5/charitycreate.jsp'/>" target="_parent">Create Charity </a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity5/charityread.jsp'/>" target="_parent">Read Create Charity </a> |&nbsp;
+			<a href="<c:url value='/jsps/entity5/charityupdate.jsp'/>" target="_parent">Update Create Charity </a> |&nbsp;	 
+			<a href="<c:url value='/jsps/entity5/charitydelete.jsp'/>" target="_parent">Delete Create Charity </a>
+		</c:otherwise>
+	</c:choose>
+    
     
   </body>
 </html>
