@@ -38,6 +38,7 @@
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/initialize.jsp'/>" target="_parent">Initialize Database</a> |&nbsp; 
 	
+	
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
