@@ -1,57 +1,53 @@
 package user.dao;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 import user.domain.User;
 
 
 
-/*
+/**
  * DDL functions performed in database
  */
-public class UserDao {
+public class InitializeDao {
 	
-/*
- * get the Search result with Username 
- */
-
-	
-	public User findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		User user = new User();
+	/**
+	 * get the Search result with Username 
+	 * @throws ClassNotFoundException 
+	 */
+	public void initDB() throws ClassNotFoundException {
 		try {
-			
+			System.out.println("attempting");
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/userbase","root", "password");
-		    String sql = "select * from user where username=?";
-		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+	          String sql = "CREATE TABLE user " +
+	                   "(username VARCHAR(255), " + 
+	                   " password VARCHAR(255), " + 
+	                   " email VARCHAR(255)) ";
+	          
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    ResultSet resultSet = preparestatement.executeQuery();
-		    //ResultSet resultSet  = preparestatement.executeUpdate();
-		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		user.setUsername(resultSet.getString("username"));
-		    		user.setPassword(resultSet.getString("password"));
-		    		user.setEmail(resultSet.getString("email"));
-		    	}
-		    }
-		
+		    System.out.println(resultSet);
 		    connect.close();
+	         System.out.println("Created table in given database...");   	  
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return user;
 	}
+	
+
 	
 	
 	/**
 	 * insert User
 	 */
-
 	public void add(User user) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

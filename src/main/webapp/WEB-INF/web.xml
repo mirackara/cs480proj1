@@ -49,6 +49,17 @@
     <url-pattern>/Entity1ServletDelete</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>initializeServlet</display-name>
+    <servlet-name>initializeServlet</servlet-name>
+    <servlet-class>user.web.servlet.initializeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initializeServlet</servlet-name>
+    <url-pattern>/initializeServlet</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>
