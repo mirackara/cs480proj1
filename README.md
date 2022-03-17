@@ -28,6 +28,10 @@ Mirac Kara (mkara3@uic.edu)
 ![image](https://user-images.githubusercontent.com/63261198/158738956-82aeaaff-46b6-4793-a83d-73abe250247f.png)
 ![image](https://user-images.githubusercontent.com/63261198/158738985-c1885ef6-0cbe-4d53-beb4-077bc8f5824f.png)
 
-
 ## CRUD for Charity
+![image](https://user-images.githubusercontent.com/63261198/158739038-8de769c4-a327-4dca-9631-005f9311cb05.png)
+![image](https://user-images.githubusercontent.com/63261198/158739085-cd3d02c6-a96d-4aac-bb79-c5e256923db1.png)
+![image](https://user-images.githubusercontent.com/63261198/158739107-a38a5dd9-6a39-4d62-8b1f-69133e170968.png)
+![image](https://user-images.githubusercontent.com/63261198/158739135-6c070ff0-2e71-4998-ae89-df44d954ec6b.png)
+
 
