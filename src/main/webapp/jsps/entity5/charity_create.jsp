@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Inventory</title>
+    <title>Charity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -54,18 +54,18 @@
 		<td>
 		<center>
 			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Inventory_ID (Primary Key):<input type="text" name="Inventory_ID" value="${form.Charity_ID }"/>
+				Charity_ID (Primary Key):<input type="text" name="Charity_ID" value="${form.Charity_ID }"/>
 				<span style="color: red; font-weight: 900">${errors.Charity_ID }</span>
 				<br/>
 				<br/>
-				Item_SKU：<input type="text" name="Item_SKU" value="${form.Charity_Name }"/>
+				Charity_Name：<input type="text" name="Charity_Name" value="${form.Charity_Name }"/>
 				<span style="color: red; font-weight: 900">${errors.Charity_Name }</span>
 				<br/>
 				<br/>
-				Item_Expiration_Date	：<input type="text" name="item_expiration_date" value="${form.Charity_Location }"/>
+				Charity_Location	：<input type="text" name="Charity_Location" value="${form.Charity_Location }"/>
 				<span style="color: red; font-weight: 900">${errors.Charity_Location }</span>
 				<br/>
-				<input type="submit" value="Create Inventory"/>
+				<input type="submit" value="Create Charity"/>
 			</form>
 			</center>
 		</td>

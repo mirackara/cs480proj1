@@ -54,20 +54,20 @@
 		<td>
 		<center>
 			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Inventory_ID (Primary Key):<input type="text" name="Inventory_ID" value="${form.Location_ID }"/>
+				Location_ID (Primary Key):<input type="text" name="Location_ID" value="${form.Location_ID }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_ID }</span>
 				<br/>
 				<br/>
-				Item_SKU：<input type="text" name="Item_SKU" value="${form.Location_City }"/>
+				Location_City：<input type="text" name="Location_City" value="${form.Location_City }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_City }</span>
 				<br/>
 				<br/>
-				Item_Expiration_Date	：<input type="text" name="item_expiration_date" value="${form.Location_State }"/>
+				Location_State	：<input type="text" name="Location_State" value="${form.Location_State }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_State }</span>
 				<br/>
 				<br/>
 
-				<input type="submit" value="Create Inventory"/>
+				<input type="submit" value="Create Location"/>
 			</form>
 			</center>
 		</td>

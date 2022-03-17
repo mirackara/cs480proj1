@@ -7,7 +7,7 @@
 <html>
   <head>
     
-    <title>Delete Inventory</title>
+    <title>Delete Location</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -45,7 +45,7 @@
 <table class="table" align="center">
 	<tr style="background: #4682B4; height: 120px; ">
 		<td colspan="2" align="center">
-			<h1 style="text-align: center; font-size:50px;">DELETE INVENTORY</h1>
+			<h1 style="text-align: center; font-size:50px;">DELETE LOCATION</h1>
 			
 			<iframe frameborder="0" src="<c:url value='/jsps/topCRUD.jsp'/>" name="top"></iframe>
 			
@@ -56,7 +56,7 @@
 		<center>
 		<form action="<c:url value='/Entity1ServletRead'/>" method="post">
 			<input type="hidden" name="method" value="regist"/>
-			Inventory ID    :<input type="text" name="username" value="${form.username }"/>
+			Location_ID    :<input type="text" name="username" value="${form.username }"/>
 			<span style="color: red; font-weight: 900">${errors.username }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
@@ -65,7 +65,7 @@
 			Email	：<input type="text" name="email" value="${form.email }"/>
 			<span style="color: red; font-weight: 900">${errors.email }</span>
 			<br/> --%>
-			<input type="submit" value="Delete Inventory"/>
+			<input type="submit" value="Delete Location"/>
 		</form>
 			</center>
 		</td>
