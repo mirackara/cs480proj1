@@ -4,10 +4,8 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
- <head>
-    
-    <title>Create Donation</title>
-    
+  <head>
+    <title>Create Donation Items</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,14 +15,15 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	
+		    <!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style type="text/css">
 		*{
 			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
-		
+			background-color:#122D32;
 			text-align:center;
 		}
 		.table{
@@ -44,35 +43,33 @@
 			color:white;
 		}
 	</style>
-  </head>  
+  </head>
   <body>
 <table class="table" align="center">
-	<tr style="background: #68d415; height: 120px; ">
+	<tr style="background: #264A27; height: 120px; ">
 		<td colspan="2" align="center">
-			
 			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
-			
 		</td>
 	</tr>	<tr>
 		<td>
 		<center>
 			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Donation Store (Primary Key):<input type="text" name="donation_store" value="${form.donation_store }"/>
+				<h1>Donation Store (Primary Key):</h1><input type="text" name="donation_store" class="form-control" style="width:200px;" value="${form.donation_store }"/>
 				<span style="color: red; font-weight: 900">${errors.donation_store }</span>
 				<br/>
 				<br/>
-				Donation SKU：<input type="text" name="donation_SKU" value="${form.donation_SKU }"/>
+				<h1>Donation SKU：</h1><input type="text"  class="form-control" style="width:200px;" name="donation_SKU" value="${form.donation_SKU }"/>
 				<span style="color: red; font-weight: 900">${errors.donation_SKU }</span>
 				<br/>
 				<br/>
-				Donation Amount：<input type="text" name="donation_amount" value="${form.donation_amount }"/>
+				<h1>Donation Amount：</h1><input type="text" class="form-control" style="width:200px;"  name="donation_amount" value="${form.donation_amount }"/>
 				<span style="color: red; font-weight: 900">${errors.donation_amount }</span>
 				<br/>
 				<br/>
-					Donation Date：<input type="text" name="donation_date" value="${form.donation_date }"/>
+					<h1>Donation Date：</h1><input type="text" class="form-control" style="width:200px;" name="donation_date" value="${form.donation_date }"/>
 				<span style="color: red; font-weight: 900">${errors.donation_date }</span>
 				<br/>
-				<input type="submit" value="Create Donation"/>
+				<input type="submit" class="btn btn-outline-primary"  value="Create Donation"/>
 			</form>
 			</center>
 		</td>

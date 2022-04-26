@@ -84,7 +84,7 @@
 						<h1> Item_Amount	：</h1><input type="text" class="form-control" style="width:200px;" name="Item_Amount" value="${form.Item_Amount }"/>
 						<span style="color: red; font-weight: 900">${errors.Item_Amount }</span>
 						<br/>
-						<input type="submit" value="Create Inventory"/>
+						<input class="btn btn-outline-primary" type="submit" value="Create Inventory"/>
 					</form>
 					</center>
 			</td>

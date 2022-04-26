@@ -4,10 +4,8 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
- <head>
-    
+  <head>
     <title>Create Store</title>
-    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,14 +15,15 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	
+		    <!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style type="text/css">
 		*{
 			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
-		
+			background-color:#122D32;
 			text-align:center;
 		}
 		.table{
@@ -44,32 +43,30 @@
 			color:white;
 		}
 	</style>
-  </head>  
+  </head>
   <body>
 <table class="table" align="center">
-	<tr style="background: #68d415; height: 120px; ">
+	<tr style="background: #264A27; height: 120px; ">
 		<td colspan="2" align="center">
-			
 			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
-			
 		</td>
-	</tr>
+		</tr>
 		<tr>
 		<td>
 		<center>
 			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Store Number (Primary Key):<input type="text" name="store_number" value="${form.store_number }"/>
+				<h1>Store Number (Primary Key):</h1><input type="text" name="store_number" class="form-control" style="width:200px;"  value="${form.store_number }"/>
 				<span style="color: red; font-weight: 900">${errors.store_number }</span>
 				<br/>
 				<br/>
-				Store Inventory：<input type="text" name="store_inventory" value="${form.store_inventory }"/>
+				<h1>Store Inventory：</h1><input type="text" name="store_inventory" class="form-control" style="width:200px;" value="${form.store_inventory }"/>
 				<span style="color: red; font-weight: 900">${errors.Item_SKU }</span>
 				<br/>
 				<br/>
-				Store Donation Date：<input type="text" name="item_expiration_date" value="${form.item_expiration_date }"/>
+				<h1>Store Donation Date：</h1><input type="text" name="item_expiration_date" class="form-control" style="width:200px;" value="${form.item_expiration_date }"/>
 				<span style="color: red; font-weight: 900">${errors.email }</span>
 				<br/>
-				<input type="submit" value="Create Store"/>
+				<input type="submit" class="btn btn-outline-primary" value="Create Store"/>
 			</form>
 			</center>
 		</td>

@@ -48,6 +48,7 @@
 			<h1 style="color:white;">Good Day, ${sessionScope.session_user.username }</h1>
 			<div style='text-align:right'>
 				<a style='font-size:30;'  class="btn btn-outline-primary" href="<c:url value='/jsps/main.jsp'/>" target="_parent">Home</a>
+				<a style='font-size:30;'  class="btn btn-outline-primary" href="<c:url value='/jsps/item.jsp'/>" target="body">Query Result</a>
 				<a style='font-size:30;'  class="btn btn-outline-primary" href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a>
 			</div>
 		</c:otherwise>

@@ -48,7 +48,7 @@
 	<table class="table" align="center">
 		<tr style="background: #4b2717; height: 100px;" >
 			<td colspan="2" align="center">
-				<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
+				<iframe frameborder="0" src="<c:url value='/jsps/topHomeScreen.jsp'/>" name="top"></iframe>
 			</td>
 		</tr>
 		<tr>

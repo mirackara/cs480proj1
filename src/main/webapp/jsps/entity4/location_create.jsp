@@ -4,10 +4,8 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
- <head>
-    
+  <head>
     <title>Create Location</title>
-    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,14 +15,15 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	
+		    <!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style type="text/css">
 		*{
 			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
-		
+			background-color:#122D32;
 			text-align:center;
 		}
 		.table{
@@ -44,33 +43,32 @@
 			color:white;
 		}
 	</style>
-  </head>  
+  </head>
   <body>
 <table class="table" align="center">
-	<tr style="background: #68d415; height: 120px; ">
+	<tr style="background: #264A27; height: 120px; ">
 		<td colspan="2" align="center">
-			
 			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
-			
 		</td>
-	</tr>	<tr>
+		</tr>
+		<tr>
 		<td>
 		<center>
 			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Location_ID (Primary Key):<input type="text" name="Location_ID" value="${form.Location_ID }"/>
+				<h1>Location_ID (Primary Key):</h1><input type="text" class="form-control" style="width:200px;"  name="Location_ID" value="${form.Location_ID }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_ID }</span>
 				<br/>
 				<br/>
-				Location_City：<input type="text" name="Location_City" value="${form.Location_City }"/>
+				<h1>Location_City：</h1><input type="text" class="form-control" style="width:200px;"  name="Location_City" value="${form.Location_City }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_City }</span>
 				<br/>
 				<br/>
-				Location_State	：<input type="text" name="Location_State" value="${form.Location_State }"/>
+				<h1>Location_State	：</h1><input type="text" class="form-control" style="width:200px;" name="Location_State" value="${form.Location_State }"/>
 				<span style="color: red; font-weight: 900">${errors.Location_State }</span>
 				<br/>
 				<br/>
 
-				<input type="submit" value="Create Location"/>
+				<input type="submit"  class="btn btn-outline-primary"  value="Create Location"/>
 			</form>
 			</center>
 		</td>
