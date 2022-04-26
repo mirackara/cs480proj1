@@ -5,11 +5,42 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			background-color:#122D32;
+			font-size:10pt;
+		}
+		body{
+			background-color:#122D32;
+			text-align:center;
+		}
+		.table{
+			width:1024px;
+			height:100%;
+		    border-collapse: collapse;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+		h1 { 
+			color:white;
+		}
+		th {
+			font-size:36px;
+			color:white;
+		}
+		td {
+  			font-size: 20px;
+  			color:white;
+		}
+	</style>
 
 </head>
 <body>
-	<h3 align="center"> User Table </h3>
-	<table border="1" width="70%" align="center">
+	<h1 align="center"> User Table </h1>
+	<table class="table" border="1" width="40%" align="center">
 	<tr>
 		<th>name</th>
 		<th>email</th>

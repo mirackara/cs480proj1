@@ -46,8 +46,8 @@
   </head>
   <body> 
    <table class="table" align="center">
-		<tr style="background: #264A26; height: 100px;" >
-			<td colspan="2" align="center">
+		<tr style="background: #408559; height: 100px;" >
+			<td align="center">
 				<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
 			</td>
 		</tr>
@@ -56,9 +56,8 @@
 				<center>
 					<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
 						<h1>Inventory_ID (Primary Key):</h1>
-						
 						 <div class="form-group">
-							<input type="text" class="form-control" style="width:200px;"  name="Inventory_ID" value="${form.username }"/>
+							<input type="text" class="form-control" style="width:200px;"  name="Inventory_ID" value="${form.Inventory_ID }"/>
 						</div>
 						<span style="color: red; font-weight: 900">${errors.Inventory_ID }</span>
 						<br/>
@@ -73,7 +72,7 @@
 						<span style="color: red; font-weight: 900">${errors.Item_SKU }</span>
 						<br/>
 						<br/>
-						<h1>Item_Expiration_Date：</h1><input type="text" class="form-control" style="width:200px;" name="item_expiration_date" value="${form.item_expiration_date }"/>
+						<h1>Item_Expiration_Date：</h1><input type="text" class="form-control" style="width:200px;" name="item_expiration_date" value="${form.Item_Expiration_Date }"/>
 						<span style="color: red; font-weight: 900">${errors.email }</span>
 						<br/>
 						<br/>

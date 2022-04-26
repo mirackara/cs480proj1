@@ -47,7 +47,7 @@
   </head>
   <body>
 <table class="table" align="center">
-	<tr style="background: #264A27; height: 120px; ">
+		<tr style="background: #408559; height: 100px;" >
 		<td colspan="2" align="center">
 			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
 		</td>
@@ -56,8 +56,8 @@
 		<td>
 		<center>
 		<h1 style="text-align: center; font-size:50px;">Delete Inventory</h1>
-		<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-			<input type="hidden" class="form-control" style="width:200px;" name="method" value="regist"/>
+		<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+			<input type="hidden" class="form-control" style="width:200px;" name="method" value="search"/>
 			Inventory ID    :<input type="text" class="form-control" style="width:200px;" name="username" value="${form.username }"/>
 			<span style="color: red; font-weight: 900">${errors.username }</span>
 			<br/>

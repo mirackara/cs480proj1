@@ -27,6 +27,7 @@
 <p style="color: red; font-weight: 900"> ${msg}</p>
 <form action="<c:url value='/initializeServlet'/>" method="post">
 	<input type="submit" value="Initalize DB"/>
+	
 </form>
   </body>
 </html>

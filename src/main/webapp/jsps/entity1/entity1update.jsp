@@ -35,7 +35,7 @@
   </head>
   <body>
 <table class="table" align="center">
-	<tr style="background: #264A27; height: 120px; ">
+		<tr style="background: #408559; height: 100px;" >
 		<td colspan="2" align="center">
 			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
 		</td>
@@ -43,8 +43,8 @@
 	<tr>
 		<td>
 		<center>
-		<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-			<input type="hidden" name="method" value="regist"/>
+		<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+			<input type="hidden" name="method" value="search"/>
 			<h1>Inventory ID    :</h1><input type="text" class="form-control" style="width:200px;" name="username" value="${form.username }"/>
 			<span style="color: red; font-weight: 900">${errors.username }</span>
 			<br/>
