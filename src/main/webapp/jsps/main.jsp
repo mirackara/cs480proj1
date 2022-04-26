@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>main</title>
+    <title>Main Page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -19,9 +19,11 @@
 	-->
 	<style type="text/css">
 		*{
+			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
+		
 			text-align:center;
 		}
 		.table{
@@ -37,23 +39,24 @@
 			width: 100%;
 			height: 100%;
 		}
+		h1 { 
+			color:white;
+		}
 	</style>
   </head>
-  
   <body>
-<table class="table" align="center">
-	<tr style="background: #68d415; height: 100px; ">
-		<td colspan="2" align="center">
-			<h1>MAIN</h1>
-			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<iframe frameborder="0" src="<c:url value='/jsps/body.jsp'/>" name="body"></iframe>
-		</td>
-	</tr>
-</table>
+	<table class="table" align="center">
+		<tr style="background: #4b2717; height: 100px;" >
+			<td colspan="2" align="center">
+				<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<iframe frameborder="0" src="<c:url value='/jsps/body.jsp'/>" name="body"></iframe>
+			</td>
+		</tr>
+	</table>
   </body>
 </html>
 

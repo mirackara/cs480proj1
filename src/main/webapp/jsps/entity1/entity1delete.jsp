@@ -18,11 +18,14 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	
 	<style type="text/css">
 		*{
+			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
+		
 			text-align:center;
 		}
 		.table{
@@ -38,25 +41,27 @@
 			width: 100%;
 			height: 100%;
 		}
+		h1 { 
+			color:white;
+		}
 	</style>
-  </head>
-  
+  </head>  
   <body>
 <table class="table" align="center">
 	<tr style="background: #68d415; height: 120px; ">
 		<td colspan="2" align="center">
-			<h1 style="text-align: center; font-size:50px;">DELETE INVENTORY</h1>
 			
-			<iframe frameborder="0" src="<c:url value='/jsps/topCRUD.jsp'/>" name="top"></iframe>
+			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
 			
 		</td>
 	</tr>
 	<tr>
 		<td>
 		<center>
+		<h1 style="text-align: center; font-size:50px;">Delete Inventory</h1>
 		<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-			<input type="hidden" name="method" value="regist"/>
-			Inventory ID    :<input type="text" name="username" value="${form.username }"/>
+			<input type="hidden" class="form-control" style="width:200px;" name="method" value="regist"/>
+			Inventory ID    :<input type="text" class="form-control" style="width:200px;" name="username" value="${form.username }"/>
 			<span style="color: red; font-weight: 900">${errors.username }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>

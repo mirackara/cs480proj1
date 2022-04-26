@@ -5,9 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    
     <title>Inventory</title>
-    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,11 +15,15 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+		    <!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style type="text/css">
 		*{
+			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
+			background-color:#122D32;
 			text-align:center;
 		}
 		.table{
@@ -37,47 +39,57 @@
 			width: 100%;
 			height: 100%;
 		}
+		h1 { 
+			color:white;
+		}
 	</style>
   </head>
-  
   <body> 
-<table class="table" align="center">
-	<tr style="background: #68d415; height: 120px; ">
-		<td colspan="2" align="center">
-			<h1 style="text-align: center; font-size:50px;">INVENTORY</h1>
-			
-			<iframe frameborder="0" src="<c:url value='/jsps/topCRUD.jsp'/>" name="top"></iframe>
-			
-		</td>
-	</tr>
-	<tr>
-		<td>
-		<center>
-			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				Inventory_ID (Primary Key):<input type="text" name="Inventory_ID" value="${form.username }"/>
-				<span style="color: red; font-weight: 900">${errors.Inventory_ID }</span>
-				<br/>
-				<br/>
-				Item_SKU：<input type="text" name="Item_SKU" value="${form.Item_SKU }"/>
-				<span style="color: red; font-weight: 900">${errors.Item_SKU }</span>
-				<br/>
-				<br/>
-				Item_Expiration_Date	：<input type="text" name="item_expiration_date" value="${form.item_expiration_date }"/>
-				<span style="color: red; font-weight: 900">${errors.email }</span>
-				<br/>
-				<br/>
-				Item_Aisle	：<input type="text" name="Item_Aisle" value="${form.Item_Aisle }"/>
-				<span style="color: red; font-weight: 900">${errors.Item_Aisle }</span>
-				<br/>
-				<br/>
-				Item_Amount	：<input type="text" name="Item_Amount" value="${form.Item_Amount }"/>
-				<span style="color: red; font-weight: 900">${errors.Item_Amount }</span>
-				<br/>
-				<input type="submit" value="Create Inventory"/>
-			</form>
-			</center>
-		</td>
-	</tr>
-</table>
+   <table class="table" align="center">
+		<tr style="background: #264A26; height: 100px;" >
+			<td colspan="2" align="center">
+				<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<center>
+					<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+						<h1>Inventory_ID (Primary Key):</h1>
+						
+						 <div class="form-group">
+							<input type="text" class="form-control" style="width:200px;"  name="Inventory_ID" value="${form.username }"/>
+						</div>
+						<span style="color: red; font-weight: 900">${errors.Inventory_ID }</span>
+						<br/>
+						<br/>
+
+						
+						<h1>Item_SKU：</h1>
+						 <div class="form-group">
+						 	<input type="text" class="form-control" style="width:200px;" name="Item_SKU" value="${form.Item_SKU }"/>
+						</div>
+						
+						<span style="color: red; font-weight: 900">${errors.Item_SKU }</span>
+						<br/>
+						<br/>
+						<h1>Item_Expiration_Date：</h1><input type="text" class="form-control" style="width:200px;" name="item_expiration_date" value="${form.item_expiration_date }"/>
+						<span style="color: red; font-weight: 900">${errors.email }</span>
+						<br/>
+						<br/>
+						<h1>Item_Aisle	：</h1><input type="text" class="form-control" style="width:200px;" name="Item_Aisle" value="${form.Item_Aisle}"/>
+						<span style="color: red; font-weight: 900">${errors.Item_Aisle }</span>
+						<br/>
+						<br/>
+						<h1> Item_Amount	：</h1><input type="text" class="form-control" style="width:200px;" name="Item_Amount" value="${form.Item_Amount }"/>
+						<span style="color: red; font-weight: 900">${errors.Item_Amount }</span>
+						<br/>
+						<input type="submit" value="Create Inventory"/>
+					</form>
+					</center>
+			</td>
+		</tr>
+	</table>
+
   </body>
 </html>

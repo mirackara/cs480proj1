@@ -5,7 +5,7 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+ <head>
     
     <title>Delete Location</title>
     
@@ -18,11 +18,14 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	
 	<style type="text/css">
 		*{
+			background-color:#122D32;
 			font-size:10pt;
 		}
 		body{
+		
 			text-align:center;
 		}
 		.table{
@@ -38,19 +41,20 @@
 			width: 100%;
 			height: 100%;
 		}
+		h1 { 
+			color:white;
+		}
 	</style>
-  </head>
-  
+  </head>  
   <body>
 <table class="table" align="center">
-	<tr style="background: #4682B4; height: 120px; ">
+	<tr style="background: #68d415; height: 120px; ">
 		<td colspan="2" align="center">
-			<h1 style="text-align: center; font-size:50px;">DELETE LOCATION</h1>
 			
-			<iframe frameborder="0" src="<c:url value='/jsps/topCRUD.jsp'/>" name="top"></iframe>
+			<iframe frameborder="0" src="<c:url value='/jsps/top.jsp'/>" name="top"></iframe>
 			
 		</td>
-	</tr>
+			</tr>
 	<tr>
 		<td>
 		<center>
