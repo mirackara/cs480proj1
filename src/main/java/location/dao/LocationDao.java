@@ -1,6 +1,6 @@
-package entity4.dao;
+package location.dao;
 
-import entity1.dao.InitializeDao;
+import location.dao.InitializeDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,64 +13,60 @@ import java.util.List;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
+import location.domain.Location;
 import user.domain.User;
 
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
-	public static Entity1 findByID(String userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+public class LocationDao {
+	public static Location findByID(String userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Location Location = new Location();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
-		    String sql = "select * from entity1 where Inventory_ID=?";
+		    String sql = "select * from Location where location_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,userID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("Inventory_ID");
+		    	String user_name = resultSet.getString("location_id");
 		    	if(user_name.equals(userID)){
-		    		entity1.setInventory_ID(resultSet.getString("Inventory_ID"));
-		    		entity1.setItem_SKU(resultSet.getString("Item_SKU"));
-		    		entity1.setItem_Amount(resultSet.getString("Item_Amount"));
-		    		entity1.setItem_Expiration_Date(resultSet.getString("Item_Expiration_Date"));
-		    		entity1.setItem_Aisle(resultSet.getString("Item_Aisle"));
+		    		Location.setlocation_id(resultSet.getString("location_id"));
+		    		Location.setlocation_city(resultSet.getString("location_city"));
+		    		Location.setlocation_state(resultSet.getString("location_state"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		System.out.println("Retrieved" + entity1);
-		return entity1;
+		System.out.println("Retrieved" + Location);
+		return Location;
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert Location
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Location form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 	
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
 			
-			String sql = "insert into entity1 values(?,?,?,?,?)";
+			String sql = "insert into Location values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
 			System.out.println(form);
-		    preparestatement.setString(1,form.getInventory_ID());
-		    preparestatement.setString(2,form.getItem_SKU());
-		    preparestatement.setString(3,form.getItem_Expiration_Date());
-		    preparestatement.setString(5,form.getItem_Aisle());
-		    preparestatement.setString(4,form.getItem_Amount());
+		    preparestatement.setString(1,form.getlocation_id());
+		    preparestatement.setString(2,form.getlocation_city());
+		    preparestatement.setString(3,form.getlocation_state());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -82,16 +78,14 @@ public class Entity1Dao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
-			String sql = "select * from entity1";
+			String sql = "select * from Location";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Entity1 entit1  = new Entity1();
-				entit1.setInventory_ID(resultSet.getString("Inventory_ID"));
-				entit1.setItem_SKU(resultSet.getString("Item_SKU"));
-				entit1.setItem_Amount(resultSet.getString("Item_Amount"));
-				entit1.setItem_Expiration_Date(resultSet.getString("Item_Expiration_Date"));
-				entit1.setItem_Aisle(resultSet.getString("Item_Aisle"));
+				Location entit1  = new Location();
+				entit1.setlocation_id(resultSet.getString("location_id"));
+				entit1.setlocation_city(resultSet.getString("location_city"));
+				entit1.setlocation_state(resultSet.getString("location_state"));
 	    		list.add(entit1);
 			 }
 			connect.close();
@@ -102,21 +96,20 @@ public class Entity1Dao {
 		
 	}
 
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Location form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update");
 		System.out.println(form);
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
-			String sql = "UPDATE entity1 SET Item_SKU = ?, Item_Expiration_Date = ? , Item_Aisle = ? , Item_Amount = ?  where Inventory_ID = ?;";
+			String sql = "UPDATE Location SET location_city = ?, location_state = ? , Item_Aisle = ? , Item_Amount = ?  where location_id = ?;";
 			System.out.println("Update Prepaered");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(5,Integer.parseInt(form.getInventory_ID()));
-		    preparestatement.setString(1,form.getItem_SKU());
-		    preparestatement.setString(2,form.getItem_Expiration_Date());
-		    preparestatement.setString(3,form.getItem_Aisle());
-		    preparestatement.setString(4,form.getItem_Amount());
+		    preparestatement.setInt(5,Integer.parseInt(form.getlocation_id()));
+		    preparestatement.setString(1,form.getlocation_city());
+		    preparestatement.setString(2,form.getlocation_state());
+
 			System.out.println(preparestatement);
 
 		    preparestatement.executeUpdate();
@@ -136,7 +129,7 @@ public class Entity1Dao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
 			
-			String sql = "delete from entity1 where Inventory_ID = ?";
+			String sql = "delete from Location where location_id = ?";
 			System.out.println(username);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 

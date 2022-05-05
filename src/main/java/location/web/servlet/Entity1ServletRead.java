@@ -1,4 +1,4 @@
-package entity4.web.servlet;
+package location.web.servlet;
 
 import java.io.IOException;
 

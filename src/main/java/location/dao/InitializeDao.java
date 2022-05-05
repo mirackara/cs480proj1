@@ -1,4 +1,4 @@
-package entity4.dao;
+package location.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

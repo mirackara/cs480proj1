@@ -1,4 +1,4 @@
-package entity4.web.servlet;
+package location.web.servlet;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -58,7 +58,7 @@ public class Entity1ServletCreate extends HttpServlet {
 //		System.out.println("1");
 		System.out.println(info);
 
-		form.setInventory_ID(info.get(0));
+		form.setlocation_id(info.get(0));
 //		System.out.println("1");
 
 		form.setItem_SKU(info.get(1));
