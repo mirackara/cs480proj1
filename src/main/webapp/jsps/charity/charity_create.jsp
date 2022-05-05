@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Create Charity</title>
+    <title>Create Location</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -54,19 +54,21 @@
 		<tr>
 		<td>
 		<center>
-			<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-				<h1>Charity_ID (Primary Key):</h1><input type="text" name="Charity_ID" class="form-control" style="width:200px;" value="${form.Charity_ID }"/>
-				<span style="color: red; font-weight: 900">${errors.Charity_ID }</span>
+			<form action="<c:url value='/LocationServletCreate'/>" method="post">
+				<h1>Location_ID (Primary Key):</h1><input type="text" class="form-control" style="width:200px;"  name="Location_ID" value="${form.location_id }"/>
+				<span style="color: red; font-weight: 900">${errors.location_id }</span>
 				<br/>
 				<br/>
-				<h1>Charity_Name：</h1><input type="text" name="Charity_Name" class="form-control" style="width:200px;" value="${form.Charity_Name }"/>
-				<span style="color: red; font-weight: 900">${errors.Charity_Name }</span>
+				<h1>Location_City：</h1><input type="text" class="form-control" style="width:200px;"  name="Location_City" value="${form.location_city }"/>
+				<span style="color: red; font-weight: 900">${errors.location_city }</span>
 				<br/>
 				<br/>
-				<h1>Charity_Location	：</h1><input type="text" class="form-control" style="width:200px;" name="Charity_Location" value="${form.Charity_Location }"/>
-				<span style="color: red; font-weight: 900">${errors.Charity_Location }</span>
+				<h1>Location_State	：</h1><input type="text" class="form-control" style="width:200px;" name="Location_State" value="${form.location_state }"/>
+				<span style="color: red; font-weight: 900">${errors.location_state }</span>
 				<br/>
-				<input type="submit" class="btn btn-outline-primary" value="Create Charity"/>
+				<br/>
+
+				<input type="submit"  class="btn btn-outline-primary"  value="Create Location"/>
 			</form>
 			</center>
 		</td>

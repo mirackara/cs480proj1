@@ -1,4 +1,4 @@
-package entity5.web.servlet;
+package charity.web.servlet;
 
 import java.io.IOException;
 //import java.util.ArrayList;
@@ -14,21 +14,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
-//import entity1.service.Entity1Exception;
-//import entity1.service.Entity1Service;
+import charity.dao.CharityDao;
+import charity.domain.Charity;
+//import charity.service.CharityException;
+//import charity.service.CharityService;
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletDelete extends HttpServlet {
+public class CharityServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletDelete() {
+    public CharityServletDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,13 +45,13 @@ public class Entity1ServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		CharityDao charitydao = new CharityDao();
+		Charity charity = null;
 		if(method.equals("search"))
 		{
 			try {
-//				entity1dao to Entity1Dao
-				entity1 = Entity1Dao.findByID(request.getParameter("username"));
+//				charitydao to CharityDao
+				charity = CharityDao.findByID(request.getParameter("charity_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -60,22 +60,25 @@ public class Entity1ServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getInventory_ID()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
+//			CharityService charityservice = new CharityService();		
+			if(charity.getcharity_id()!=null){
+						System.out.println(charity);
+						request.setAttribute("charity", charity);
+						request.setAttribute("charity_id", charity.getcharity_id());
+						request.setAttribute("charity_name", charity.getcharity_name());
+						request.setAttribute("charity_location", charity.getcharity_location());
+						request.getRequestDispatcher("/jsps/charity/charity_delete_output.jsp").forward(request, response);
 					
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/charity/charity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1dao.delete(request.getParameter("username"));
+				charitydao.delete(request.getParameter("charity_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -84,7 +87,7 @@ public class Entity1ServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/charity/charity_read_output.jsp").forward(request, response);
 		}
 	}
 }

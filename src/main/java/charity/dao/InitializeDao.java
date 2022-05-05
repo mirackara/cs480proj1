@@ -1,4 +1,4 @@
-package entity5.dao;
+package charity.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

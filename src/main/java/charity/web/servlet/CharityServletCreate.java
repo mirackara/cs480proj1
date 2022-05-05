@@ -1,4 +1,4 @@
-package entity5.web.servlet;
+package charity.web.servlet;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -13,22 +13,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.Entity1;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import charity.domain.Charity;
+import charity.service.CharityException;
+import charity.service.CharityService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class CharityServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public CharityServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,9 +44,9 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		CharityService charityservice = new CharityService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		Charity form = new Charity();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
@@ -58,25 +58,22 @@ public class Entity1ServletCreate extends HttpServlet {
 //		System.out.println("1");
 		System.out.println(info);
 
-		form.setInventory_ID(info.get(0));
+		form.setcharity_id(info.get(0));
 //		System.out.println("1");
 
-		form.setItem_SKU(info.get(1));
+		form.setcharity_name(info.get(1));
 //		System.out.println("2");
 		
-		form.setItem_Expiration_Date(info.get(2));		
-		System.out.println("3e");
+		form.setcharity_location(info.get(2));		
+//		System.out.println("3e");
 
-		form.setItem_Aisle(info.get(3));	
-		form.setItem_Amount(info.get(4));
 
-		
 		try {
 			System.out.println("3");
-			entity1service.create(form);
+			charityservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | CharityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

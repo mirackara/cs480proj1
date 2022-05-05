@@ -5,8 +5,8 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <title>Update Charity</title>
+<head>
+    <title>Delete Location</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -55,10 +55,12 @@
 		<tr>
 		<td>
 				<center>
-		<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-			<input type="hidden" name="method" value="regist"/>
-			<h1>Charity_ID    :</h1><input type="text" name="username"  class="form-control" style="width:200px;"value="${form.username }"/>
-			<span style="color: red; font-weight: 900">${errors.username }</span>
+						<h1 style="text-align: center; font-size:50px;">Delete Location</h1>
+				
+		<form action="<c:url value='/LocationServletDelete'/>" method="post">
+			<input type="hidden" name="method" value="search"/>
+			<h1>Location_ID    :</h1><input type="text" name="location_id" class="form-control" style="width:200px;"  value="${form.location_id }"/>
+			<span style="color: red; font-weight: 900">${errors.location_id }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 			<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -66,7 +68,7 @@
 			Email	：<input type="text" name="email" value="${form.email }"/>
 			<span style="color: red; font-weight: 900">${errors.email }</span>
 			<br/> --%>
-			<input type="submit"  class="btn btn-outline-primary" value="Update Charity"/>
+			<input type="submit" class="btn btn-outline-primary" value="Delete Location"/>
 		</form>
 			</center>
 		</td>

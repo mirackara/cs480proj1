@@ -1,18 +1,18 @@
-package entity5.service;
+package charity.service;
 
-public class Entity1Exception extends Exception {
+public class CharityException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Entity1Exception() {
+	public CharityException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Entity1Exception(String message) {
+	public CharityException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

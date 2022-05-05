@@ -1,4 +1,4 @@
-package entity5.web.servlet;
+package charity.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,23 +11,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
-//import entity1.service.Entity1Service;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import charity.dao.CharityDao;
+import charity.domain.Charity;
+//import charity.service.CharityService;
+import charity.service.CharityException;
+import charity.service.CharityService;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletUpdate extends HttpServlet {
+public class CharityServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletUpdate() {
+    public CharityServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,13 +45,13 @@ public class Entity1ServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Posting");
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		CharityDao charitydao = new CharityDao();
+		Charity charity = null;
 		
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = Entity1Dao.findByID(request.getParameter("username"));
+				charity = CharityDao.findByID(request.getParameter("charity_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -60,25 +60,28 @@ public class Entity1ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getInventory_ID()!=null){
+//			CharityService charityservice = new CharityService();		
+			if(charity.getcharity_id()!=null){
 				System.out.println("11");
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+						System.out.println(charity);
+						request.setAttribute("charity", charity);
+						request.setAttribute("charity_id", charity.getcharity_id());
+						request.setAttribute("charity_name", charity.getcharity_name());
+						request.setAttribute("charity_location", charity.getcharity_location());
+						request.getRequestDispatcher("/jsps/charity/charity_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/charity/charity_update_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			System.out.println("Updating!");
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Entity1 form = new Entity1();
+			Charity form = new Charity();
 			List<String> info = new ArrayList<String>();
 			for(String name : paramMap.keySet()) {
 				
@@ -92,15 +95,13 @@ public class Entity1ServletUpdate extends HttpServlet {
 					}
 				}
 			}
-			form.setInventory_ID(info.get(1));
-			form.setItem_SKU(info.get(2));
-			form.setItem_Expiration_Date(info.get(3));		
-			form.setItem_Aisle(info.get(4));	
-			form.setItem_Amount(info.get(5));
+			form.setcharity_id(info.get(1));
+			form.setcharity_name(info.get(2));
+			form.setcharity_location(info.get(3));		
 			System.out.println("form:" + form);
 
 			try {
-				entity1dao.update(form);
+				charitydao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -110,7 +111,7 @@ public class Entity1ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/charity/charity_update_output.jsp").forward(request, response);
 		}
 	}
 }
