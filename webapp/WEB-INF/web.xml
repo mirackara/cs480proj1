@@ -49,6 +49,56 @@
     <url-pattern>/Entity1ServletDelete</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    
+      <description></description>
+    <display-name>StoreServletCreate</display-name>
+    <servlet-name>StoreServletCreate</servlet-name>
+    <servlet-class>entity2.web.servlet.StoreServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreServletCreate</servlet-name>
+    <url-pattern>/StoreServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>StoreServletRead</display-name>
+    <servlet-name>StoreServletRead</servlet-name>
+    <servlet-class>entity2.web.servlet.StoreServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreServletRead</servlet-name>
+    <url-pattern>/StoreServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>StoreServletUpdate</display-name>
+    <servlet-name>StoreServletUpdate</servlet-name>
+    <servlet-class>entity2.web.servlet.StoreServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreServletUpdate</servlet-name>
+    <url-pattern>/StoreServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>StoreServletDelete</display-name>
+    <servlet-name>StoreServletDelete</servlet-name>
+    <servlet-class>entity2.web.servlet.StoreServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreServletDelete</servlet-name>
+    <url-pattern>/StoreServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
     <servlet>
     <description></description>
     <display-name>initializeServlet</display-name>
@@ -105,6 +155,20 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+    
+  <servlet>
+    <description></description>
+    <display-name>queryOne</display-name>
+    <servlet-name>queryOne</servlet-name>
+    
+    <servlet-class>user.web.servlet.queryOne</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>queryOne</servlet-name>
+    <url-pattern>/queryOne</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
