@@ -25,11 +25,14 @@ public class LocationDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
+			
 		    String sql = "select * from Location where location_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,userID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
+		    System.out.println("SQL find query for " + userID + " executed ");
+		    
 		    while(resultSet.next()){
 		    	String user_name = resultSet.getString("location_id");
 		    	if(user_name.equals(userID)){
@@ -40,6 +43,7 @@ public class LocationDao {
 		    }
 		    connect.close();
 		} catch(SQLException e) {
+			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 		System.out.println("Retrieved" + Location);
@@ -60,10 +64,10 @@ public class LocationDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
-			
-			String sql = "insert into Location values(?,?,?,?,?)";
-			PreparedStatement preparestatement = connect.prepareStatement(sql);
 			System.out.println(form);
+
+			String sql = "insert into Location values(?,?,?)";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
 		    preparestatement.setString(1,form.getlocation_id());
 		    preparestatement.setString(2,form.getlocation_city());
 		    preparestatement.setString(3,form.getlocation_state());
@@ -82,11 +86,11 @@ public class LocationDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Location entit1  = new Location();
-				entit1.setlocation_id(resultSet.getString("location_id"));
-				entit1.setlocation_city(resultSet.getString("location_city"));
-				entit1.setlocation_state(resultSet.getString("location_state"));
-	    		list.add(entit1);
+				Location location  = new Location();
+				location.setlocation_id(resultSet.getString("location_id"));
+				location.setlocation_city(resultSet.getString("location_city"));
+				location.setlocation_state(resultSet.getString("location_state"));
+	    		list.add(location);
 			 }
 			connect.close();
 		} catch(SQLException e) {
@@ -103,7 +107,7 @@ public class LocationDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/store_inventory","root", "password");
-			String sql = "UPDATE Location SET location_city = ?, location_state = ? , Item_Aisle = ? , Item_Amount = ?  where location_id = ?;";
+			String sql = "UPDATE Location SET location_city = ?, location_state = ? where location_id = ?;";
 			System.out.println("Update Prepaered");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(5,Integer.parseInt(form.getlocation_id()));

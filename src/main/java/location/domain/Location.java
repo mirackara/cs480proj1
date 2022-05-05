@@ -32,7 +32,7 @@ public class Location {
 	}
 
 	public void setlocation_id(String location_id) {
-		location_id = location_id;
+		this.location_id = location_id;
 	}
 
 	public String getlocation_city() {
@@ -40,7 +40,7 @@ public class Location {
 	}
 
 	public void setlocation_city(String location_city) {
-		location_city = location_city;
+		this.location_city = location_city;
 	}
 
 	public String getlocation_state() {
@@ -48,7 +48,7 @@ public class Location {
 	}
 
 	public void setlocation_state(String location_state) {
-		location_state = location_state;
+		this.location_state = location_state;
 	}
 
 }

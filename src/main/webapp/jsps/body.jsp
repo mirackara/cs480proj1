@@ -87,10 +87,10 @@
 					    <table>
 			   		    	<tr>
 					    		<td>
-									<a href="<c:url value='/jsps/entity4/location_create.jsp'/>" class="btn btn-warning"  target="_parent">Create Location </a> 
-									<a href="<c:url value='/jsps/entity4/location_read.jsp'/>"  class="btn btn-warning" target="_parent">Read Location</a> 
-									<a href="<c:url value='/jsps/entity4/location_update.jsp'/>" class="btn btn-warning"  target="_parent">Update Location</a>
-									<a href="<c:url value='/jsps/entity4/location_delete.jsp'/>" class="btn btn-warning"  target="_parent">Delete Location</a>	
+									<a href="<c:url value='/jsps/location/location_create.jsp'/>" class="btn btn-warning"  target="_parent">Create Location </a> 
+									<a href="<c:url value='/jsps/location/location_read.jsp'/>"  class="btn btn-warning" target="_parent">Read Location</a> 
+									<a href="<c:url value='/jsps/location/location_update.jsp'/>" class="btn btn-warning"  target="_parent">Update Location</a>
+									<a href="<c:url value='/jsps/location/location_delete.jsp'/>" class="btn btn-warning"  target="_parent">Delete Location</a>	
 								</td>
 							</tr>
 						</table>

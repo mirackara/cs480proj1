@@ -1,0 +1,68 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>Main Page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<style type="text/css">
+		*{
+			background-color:#122D32;
+			font-size:10pt;
+		}
+		body{
+		
+			text-align:center;
+		}
+		.table{
+			width:1024px;
+			height:100%;
+			border:1px solid gray;
+		    border-collapse: collapse;
+		}
+		.table td{
+			border:1px solid gray;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+		h1 { 
+			color:white;
+		}
+	</style>
+  </head>
+  <body>
+	<table class="table" align="center">
+		<tr style="background: #4b2717; height: 100px;" >
+			<td colspan="2" align="center">
+				<iframe frameborder="0" src="<c:url value='/jsps/topHomeScreen.jsp'/>" name="top"></iframe>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<iframe frameborder="0" src="<c:url value='/jsps/body.jsp'/>" name="body"></iframe>
+			</td>
+		</tr>
+	</table>
+  </body>
+</html>
+
+
+
+
+
+
+
