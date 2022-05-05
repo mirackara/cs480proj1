@@ -40,17 +40,7 @@
 </head>
 <body>
 	<h1 align="center"> User Table </h1>
-	<table class="table" border="1" width="40%" align="center">
-	<tr>
-		<th>name</th>
-		<th>email</th>
-	</tr>
-<c:forEach items="${UserList}" var="user">
-	<tr>
-		<td>${user.username}</td>
-		<td>${user.email}</td>
-	</tr>
-</c:forEach>
+	<h1> "${UserList}" </h1>
 </table>
 </body>
 </html>
