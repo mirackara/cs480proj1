@@ -56,8 +56,8 @@
 		<td>
 		<center>
 		<form action="<c:url value='/LocationServletUpdate'/>" method="post">
-			<input type="hidden" name="method" value="regist"/>
-			<h1>Location_ID    :</h1><input type="text" class="form-control" style="width:200px;" name="username" value="${form.location_id }"/>
+			<input type="hidden" name="method" value="search"/>
+			<h1>Location_ID    :</h1><input type="text" class="form-control" style="width:200px;" name="location_id" value="${form.location_id }"/>
 			<span style="color: red; font-weight: 900">${errors.location_id }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>

@@ -110,7 +110,7 @@ public class LocationDao {
 			String sql = "UPDATE Location SET location_city = ?, location_state = ? where location_id = ?;";
 			System.out.println("Update Prepaered");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(5,Integer.parseInt(form.getlocation_id()));
+		    preparestatement.setInt(3,Integer.parseInt(form.getlocation_id()));
 		    preparestatement.setString(1,form.getlocation_city());
 		    preparestatement.setString(2,form.getlocation_state());
 

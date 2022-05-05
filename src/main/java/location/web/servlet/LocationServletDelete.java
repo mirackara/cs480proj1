@@ -64,6 +64,9 @@ public class LocationServletDelete extends HttpServlet {
 			if(location.getlocation_id()!=null){
 						System.out.println(location);
 						request.setAttribute("location", location);
+						request.setAttribute("location_id", location.getlocation_id());
+						request.setAttribute("location_city", location.getlocation_city());
+						request.setAttribute("location_state", location.getlocation_state());
 						request.getRequestDispatcher("/jsps/location/location_delete_output.jsp").forward(request, response);
 					
 				}
@@ -75,7 +78,7 @@ public class LocationServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				locationdao.delete(request.getParameter("username"));
+				locationdao.delete(request.getParameter("location_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

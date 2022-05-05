@@ -57,7 +57,7 @@
 		<center>
 		<form action="<c:url value='/LocationServletRead'/>" method="post">
 			<input type="hidden" name="method" value="regist"/>
-			<h1>Location_ID    :</h1><input type="text" name="username"  class="form-control" style="width:200px;" value="${form.location_id }"/>
+			<h1>Location_ID    :</h1><input type="text" name="location_id"  class="form-control" style="width:200px;" value="${form.location_id }"/>
 			<span style="color: red; font-weight: 900">${errors.location_id }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>

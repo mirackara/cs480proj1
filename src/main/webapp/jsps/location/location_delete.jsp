@@ -55,8 +55,10 @@
 		<tr>
 		<td>
 				<center>
-		<form action="<c:url value='/LocationServletRead'/>" method="post">
-			<input type="hidden" name="method" value="regist"/>
+						<h1 style="text-align: center; font-size:50px;">Delete Location</h1>
+				
+		<form action="<c:url value='/LocationServletDelete'/>" method="post">
+			<input type="hidden" name="method" value="search"/>
 			<h1>Location_ID    :</h1><input type="text" name="username" class="form-control" style="width:200px;"  value="${form.location_id }"/>
 			<span style="color: red; font-weight: 900">${errors.location_id }</span>
 			<br/>

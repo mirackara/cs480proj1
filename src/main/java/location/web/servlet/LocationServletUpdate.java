@@ -65,6 +65,9 @@ public class LocationServletUpdate extends HttpServlet {
 				System.out.println("11");
 						System.out.println(location);
 						request.setAttribute("location", location);
+						request.setAttribute("location_id", location.getlocation_id());
+						request.setAttribute("location_city", location.getlocation_city());
+						request.setAttribute("location_state", location.getlocation_state());
 						request.getRequestDispatcher("/jsps/location/location_update_output.jsp").forward(request, response);
 					
 				}

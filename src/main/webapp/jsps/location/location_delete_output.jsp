@@ -27,12 +27,12 @@
 <form action="<c:url value='/LocationServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="username" value="${location.username }"/>
-	User    :<input type="text" name="username" value="${location.username }" disabled/>
+	location_id    :<input type="text" name="username" value="${location.location_id }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password" value="${location.password }" disabled/>
+	location_city：<input type="text" name="password" value="${location.location_city }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${location.email }" disabled/>
+	location_state	：<input type="text" name="email" value="${location.location_state }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Entity1"/>
 </form>

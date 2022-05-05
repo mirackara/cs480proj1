@@ -24,23 +24,23 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${location.username }" disabled/>
+	User    :<input type="text" name="location_id1" value="${location.location_id }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${location.password }" disabled />
+	Password：<input type="text" name="location_city1=" value="${location.location_city }" disabled />
 	<br/>
-	Email	：<input type="text" name="email1" value="${location.email }" disabled/>
+	Email	：<input type="text" name="location_state1" value="${location.location_state }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/LocationServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${location.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="location_id" value="${location.location_id }"/>
+	City：<input type="location_city" name="location_city" value="${form.location_city }"/>
+	<span style="color: red; font-weight: 900">${errors.location_city }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	State	：<input type="text" name="email" value="${form.location_state }"/>
+	<span style="color: red; font-weight: 900">${errors.location_state }</span>
 	<br/>
 	<input type="submit" value="Update Location"/>
 </form>
