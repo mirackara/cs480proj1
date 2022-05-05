@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Update Location</title>
+    <title>Update Charity</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -55,10 +55,10 @@
 		<tr>
 		<td>
 		<center>
-		<form action="<c:url value='/LocationServletUpdate'/>" method="post">
+		<form action="<c:url value='/CharityServletUpdate'/>" method="post">
 			<input type="hidden" name="method" value="search"/>
-			<h1>Location_ID    :</h1><input type="text" class="form-control" style="width:200px;" name="location_id" value="${form.location_id }"/>
-			<span style="color: red; font-weight: 900">${errors.location_id }</span>
+			<h1>Charity_ID    :</h1><input type="text" class="form-control" style="width:200px;" name="charity_id" value="${form.charity_id }"/>
+			<span style="color: red; font-weight: 900">${errors.charity_id }</span>
 			<br/>
 		<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 			<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -66,7 +66,7 @@
 			Email	：<input type="text" name="email" value="${form.email }"/>
 			<span style="color: red; font-weight: 900">${errors.email }</span>
 			<br/> --%>
-			<input type="submit" class="btn btn-outline-primary" value="Update Location"/>
+			<input type="submit" class="btn btn-outline-primary" value="Update Charity"/>
 		</form>
 			</center>
 		</td>

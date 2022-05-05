@@ -24,25 +24,25 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="location_id1" value="${location.location_id }" disabled/>
+	ID    :<input type="text" name="charity_id1" value="${charity.charity_id }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="location_city1=" value="${location.location_city }" disabled />
+	Name：<input type="text" name="charity_name1=" value="${charity.charity_name }" disabled />
 	<br/>
-	Email	：<input type="text" name="location_state1" value="${location.location_state }" disabled/>
+	Location	：<input type="text" name="charity_location1" value="${charity.charity_location }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/LocationServletUpdate'/>" method="post">
+<form action="<c:url value='/CharityServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="location_id" value="${location.location_id }"/>
-	City：<input type="location_city" name="location_city" value="${form.location_city }"/>
-	<span style="color: red; font-weight: 900">${errors.location_city }</span>
+				<input type="hidden" name="charity_id" value="${charity.charity_id }"/>
+	Name：<input type="charity_name" name="charity_name" value="${form.charity_name }"/>
+	<span style="color: red; font-weight: 900">${errors.charity_name }</span>
 	<br/>
-	State	：<input type="text" name="email" value="${form.location_state }"/>
-	<span style="color: red; font-weight: 900">${errors.location_state }</span>
+	Location	：<input type="text" name="email" value="${form.charity_location }"/>
+	<span style="color: red; font-weight: 900">${errors.charity_location }</span>
 	<br/>
-	<input type="submit" value="Update Location"/>
+	<input type="submit" value="Update Charity"/>
 </form>
 
 </body>

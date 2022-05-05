@@ -198,6 +198,19 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>CharityfindAll</display-name>
+    <servlet-name>CharityfindAll</servlet-name>
+    
+    <servlet-class>charity.web.servlet.CharityfindAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharityfindAll</servlet-name>
+    <url-pattern>/CharityfindAll</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

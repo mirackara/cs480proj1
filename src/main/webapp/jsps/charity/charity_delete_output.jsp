@@ -24,17 +24,17 @@
   <body>
   <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/LocationServletDelete'/>" method="post">
+<form action="<c:url value='/CharityServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="location_id" value="${location.location_id }"/>
-	location_id    :<input type="text" name="location_id" value="${location.location_id }" disabled/>
+		<input type="hidden" name="charity_id" value="${charity.charity_id }"/>
+	charity_id    :<input type="text" name="charity_id" value="${charity.charity_id }" disabled/>
 	<br/>
 	
-	location_city：<input type="text" name="password" value="${location.location_city }" disabled/>
+	charity_name：<input type="text" name="password" value="${charity.charity_name }" disabled/>
 	<br/>
-	location_state	：<input type="text" name="email" value="${location.location_state }" disabled/>
+	charity_location	：<input type="text" name="email" value="${charity.charity_location }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Location"/>
+	<input type="submit" value="Delete Charity"/>
 </form>
 
 </body>

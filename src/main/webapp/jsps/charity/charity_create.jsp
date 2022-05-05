@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Create Location</title>
+    <title>Create Charity</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -54,21 +54,21 @@
 		<tr>
 		<td>
 		<center>
-			<form action="<c:url value='/LocationServletCreate'/>" method="post">
-				<h1>Location_ID (Primary Key):</h1><input type="text" class="form-control" style="width:200px;"  name="Location_ID" value="${form.location_id }"/>
-				<span style="color: red; font-weight: 900">${errors.location_id }</span>
+			<form action="<c:url value='/CharityServletCreate'/>" method="post">
+				<h1>ID (Primary Key):</h1><input type="text" class="form-control" style="width:200px;"  name="Charity_ID" value="${form.charity_id }"/>
+				<span style="color: red; font-weight: 900">${errors.charity_id }</span>
 				<br/>
 				<br/>
-				<h1>Location_City：</h1><input type="text" class="form-control" style="width:200px;"  name="Location_City" value="${form.location_city }"/>
-				<span style="color: red; font-weight: 900">${errors.location_city }</span>
+				<h1>name：</h1><input type="text" class="form-control" style="width:200px;"  name="Charity_City" value="${form.charity_name }"/>
+				<span style="color: red; font-weight: 900">${errors.charity_name }</span>
 				<br/>
 				<br/>
-				<h1>Location_State	：</h1><input type="text" class="form-control" style="width:200px;" name="Location_State" value="${form.location_state }"/>
-				<span style="color: red; font-weight: 900">${errors.location_state }</span>
+				<h1>location (id)	：</h1><input type="text" class="form-control" style="width:200px;" name="Charity_State" value="${form.charity_location }"/>
+				<span style="color: red; font-weight: 900">${errors.charity_location }</span>
 				<br/>
 				<br/>
 
-				<input type="submit"  class="btn btn-outline-primary"  value="Create Location"/>
+				<input type="submit"  class="btn btn-outline-primary"  value="Create Charity"/>
 			</form>
 			</center>
 		</td>

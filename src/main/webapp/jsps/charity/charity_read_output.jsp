@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Location Output</title>
+    <title>Read Charity Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,17 @@
   </head>
   
   <body>
-  <h1>Read Location Output</h1>
+  <h1>Read Charity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${location.location_id }" disabled/>
+	ID    :<input type="text" name="username" value="${charity.charity_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${location.location_city }" disabled/>
+	Name：<input type="text" name="password" value="${charity.charity_name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${location.location_state }" disabled/>
+	Location	：<input type="text" name="email" value="${charity.charity_location }" disabled/>
 	<br/>
 </form>
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+<button onclick="window.charity.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>

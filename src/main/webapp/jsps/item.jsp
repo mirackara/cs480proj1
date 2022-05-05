@@ -58,7 +58,7 @@
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Store Table</a>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Donation Items Table</a>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Location Table</a>
-				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Charity Table</a>
+				    <a href="<c:url value='/CharityfindAll'/>" class = "btn btn-outline-primary" target="body">List Charity Table</a>
 				</td>
 			</tr>
 		</table>

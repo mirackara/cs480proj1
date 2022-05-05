@@ -24,11 +24,11 @@
   <h1>Read Location Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${location.location_id }" disabled/>
+	ID   :<input type="text" name="username" value="${location.location_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${location.location_city }" disabled/>
+	City：<input type="text" name="password" value="${location.location_city }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${location.location_state }" disabled/>
+	State	：<input type="text" name="email" value="${location.location_state }" disabled/>
 	<br/>
 </form>
 

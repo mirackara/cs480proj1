@@ -98,10 +98,10 @@
 					    <table>
 			   		    	<tr>
 					    		<td>
-									<a href="<c:url value='/jsps/entity5/charity_create.jsp'/>" class="btn btn-info" target="_parent">Create Charity </a>
-									<a href="<c:url value='/jsps/entity5/charity_read.jsp'/>" class="btn btn-info" target="_parent">Read Create Charity </a>
-									<a href="<c:url value='/jsps/entity5/charity_update.jsp'/>" class="btn btn-info" target="_parent">Update Create Charity </a>	 
-									<a href="<c:url value='/jsps/entity5/charity_delete.jsp'/>" class="btn btn-info" target="_parent">Delete Create Charity </a>
+									<a href="<c:url value='/jsps/charity/charity_create.jsp'/>" class="btn btn-info" target="_parent">Create Charity </a>
+									<a href="<c:url value='/jsps/charity/charity_read.jsp'/>" class="btn btn-info" target="_parent">Read Charity </a>
+									<a href="<c:url value='/jsps/charity/charity_update.jsp'/>" class="btn btn-info" target="_parent">Update Create Charity </a>	 
+									<a href="<c:url value='/jsps/charity/charity_delete.jsp'/>" class="btn btn-info" target="_parent">Delete Create Charity </a>
 								</td>
 							</tr>
 						</table>
