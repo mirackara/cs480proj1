@@ -54,7 +54,7 @@
 	    	<tr>
 	    		<td>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List All Users</a>
-				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Inventory Table</a>
+				    <a href="<c:url value='/queryOne'/>" class = "btn btn-outline-primary" target="body">List Inventory Table</a>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Store Table</a>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Donation Items Table</a>
 				    <a href="<c:url value='/findAll'/>" class = "btn btn-outline-primary" target="body">List Location Table</a>
